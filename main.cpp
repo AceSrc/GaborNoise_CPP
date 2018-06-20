@@ -6,7 +6,7 @@
 using namespace cv;
 using namespace std;
 
-const int n = 1024;
+const int n = 512;
 
 Mat src(2 * n, 2 * n, CV_8UC1);
 // GaborNoise_isotropic gn;
