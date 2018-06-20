@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.6.0">
+	<integrator type="path"/>
+
+  <!--<sensor type="perspective">-->
+    <!--<transform name="toWorld">-->
+      <!--<lookAt origin="-10, 0.1, 0" target="0, 0.1, 0" up="0, 1, 0"/>-->
+    <!--</transform>-->
+  <!--</sensor>-->
+
+
+  <texture type="bitmap" id="myImage">
+      <string name="filename" value="noise.png"/>
+  </texture>
+
+  <bsdf type="diffuse" id="myMaterial">
+    <texture type="bitmap" name="reflectance">
+      <string name="filename" value="noise.png" />
+      <string name="wrapMode" value="repeat" />
+      <string name="filterType" value="trilinear" />
+      <float name="uvscale" value="100" />
+    </texture>
+  </bsdf>
+
+  <!--<shape type="cube">-->
+    <!--<transform name="toWorld">-->
+      <!--<translate x="-2.5" y="0" z="0"/>-->
+    <!--</transform>-->
+    <!--<ref id="myMaterial"/>-->
+    <!--<blackbody name="spectrumProperty" temperature="5000K"/>-->
+  <!--</shape>-->
+
+  <shape type="sphere">
+    <transform name="toWorld">
+      <translate x="2.5" y="0" z="0"/>
+    </transform>
+    <float name="radius" value="1" />
+    <!--<bsdf type="diffuse">-->
+      <!--<srgb name="reflectance" value="#6d7185"/>-->
+    <!--</bsdf>-->
+    <!--<blackbody name="spectrumProperty" temperature="5000K"/>-->
+  </shape>
+
+  <!--<shape type="ply">-->
+    <!--<transform name="toWorld">-->
+      <!--<translate x="0" y="0" z="0"/>-->
+    <!--</transform>-->
+    <!--<string name="filename" value="teapot.ply" />-->
+    <!--<bsdf type="diffuse">-->
+      <!--<texture type="bitmap" name="reflectance">-->
+        <!--<string name="filename" value="noise.png"/>-->
+        <!--<string name="wrapMode" value="repeat" />-->
+        <!--<string name="filterType" value="trilinear" />-->
+      <!--</texture>-->
+    <!--</bsdf>-->
+  <!--</shape>-->
+</scene>
