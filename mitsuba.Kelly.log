@@ -1,4 +1,0 @@
-2018-06-20 20:39:33 INFO  main [mtsutil.cpp:232] Mitsuba version 0.6.0 (Linux, 64 bit), Copyright (c) 2017 Wenzel Jakob
-2018-06-20 20:39:33 INFO  main [mtsutil.cpp:366] Loading utility "tonemap" ..
-2018-06-20 20:39:33 INFO  main [Tonemap] Loading image "/home/acesrc/Desktop/svpng-master/data/matpreview.exr" ..
-2018-06-20 20:39:33 INFO  main [Tonemap] Writing tonemapped image to "/home/acesrc/Desktop/svpng-master/data/matpreview.png" ..

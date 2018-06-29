@@ -14,6 +14,7 @@
     <bsdf type="diffuse">
       <texture type="bitmap" name="reflectance">
         <string name="filename" value="noise.png"/>
+        <float name="uvscale" value="3" />
       </texture>
     </bsdf>
 	</shape>

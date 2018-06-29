@@ -1,0 +1,34 @@
+2018-06-21 21:46:28 INFO  main [mainwindow.cpp:79] Mitsuba version 0.6.0 (Linux, 64 bit), Copyright (c) 2017 Wenzel Jakob
+2018-06-21 21:46:28 INFO  main [mainwindow.cpp:82] Configured for RGB-based rendering
+2018-06-21 21:46:28 DEBUG main [X11Session] Initializing X11 session
+2018-06-21 21:46:28 DEBUG main [X11Session] VidMode extension 2.2 found
+2018-06-21 21:46:28 DEBUG main [X11Session] GLX Version 1.4 found
+2018-06-21 21:46:28 DEBUG main [GLXRenderer] Using an existing GLX context
+2018-06-21 21:46:28 DEBUG main [GLRenderer] OpenGL renderer : Mesa DRI Intel(R) HD Graphics 520 (Skylake GT2) 
+2018-06-21 21:46:28 DEBUG main [GLRenderer] OpenGL vendor   : Intel Open Source Technology Center
+2018-06-21 21:46:28 DEBUG main [GLRenderer] OpenGL version  : 3.0 Mesa 18.0.0-rc5
+2018-06-21 21:46:28 DEBUG main [GLRenderer] Capabilities: Framebuffers objects are supported.
+2018-06-21 21:46:28 DEBUG main [GLRenderer] Capabilities: GLSL is supported.
+2018-06-21 21:46:28 DEBUG main [GLRenderer] Capabilities: Floating point textures are supported.
+2018-06-21 21:46:28 DEBUG main [GLRenderer] Capabilities: Floating point color buffers are supported.
+2018-06-21 21:46:28 DEBUG main [GLRenderer] Capabilities: Fast buffer blitting is supported.
+2018-06-21 21:46:28 DEBUG main [GLRenderer] Capabilities: Multisample framebuffer objects are supported.
+2018-06-21 21:46:28 DEBUG main [GLRenderer] Capabilities: Vertex buffer objects are supported.
+2018-06-21 21:46:28 WARN  main [GLRenderer] Capabilities: Geometry shaders are NOT supported!
+2018-06-21 21:46:28 DEBUG main [GLRenderer] Capabilities: Custom texture filtering is supported.
+2018-06-21 21:46:28 DEBUG main [GLRenderer] Capabilities: Synchronization objects are supported.
+2018-06-21 21:46:28 INFO  main [GLRenderer] Capabilities: Bindless rendering is NOT supported!
+2018-06-21 21:46:28 DEBUG main [Thread] Spawning thread "prvw"
+2018-06-21 21:46:28 DEBUG prvw [X11Device] Initializing X11 device
+2018-06-21 21:46:28 DEBUG prvw [GLXRenderer] Initializing GLX renderer
+2018-06-21 21:46:28 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Accumulation program']
+2018-06-21 21:46:28 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Directional shadow map generator']
+2018-06-21 21:46:28 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Cube/Hemicube shadow map generator (5/6 pass version)']
+2018-06-21 21:46:28 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Tonemapper [Gamma]']
+2018-06-21 21:46:28 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Tonemapper [Reinhard et al. 2002]']
+2018-06-21 21:46:28 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Downsampling program']
+2018-06-21 21:46:28 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Log-luminance program']
+2018-06-21 21:46:28 DEBUG main [Thread] Spawning thread "wrk0"
+2018-06-21 21:46:28 DEBUG main [Thread] Spawning thread "wrk1"
+2018-06-21 21:46:28 DEBUG main [Thread] Spawning thread "wrk2"
+2018-06-21 21:46:28 DEBUG main [Thread] Spawning thread "wrk3"

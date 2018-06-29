@@ -72,8 +72,8 @@ class GaborNoise {
   (x * cos(omega_0) + y * sin(omega_0)));
   }*/
 
- public:
   virtual float_type fourier(float_type x, float_type y) const { return 0; }
+ public:
   void set(float_type _K = 1.0, float_type _a = .05, float_type _F_0 = .0625,
            unsigned _number_of_impulses_per_cell = 64,
            float_type _error_ratio = .05) {
@@ -135,8 +135,12 @@ class GaborNoise {
     return sqrt(-log(error_ratio) / M_PI) / a;
   }
 
-  float_type get_gabor(float_type x, float_type y) const {
+  float_type get_kernel(float_type x, float_type y) const {
     return gabor(K, a, F_0, lower_bound, x * kernel_radius, y * kernel_radius);
+  }
+
+  float_type get_fourier(float_type x, float_type y) const {
+    return fourier(x, y);
   }
 
   void set_error_ratio(float_type _error_ratio) {
@@ -187,7 +191,6 @@ class GaborNoise_anisotropic : public GaborNoise {
            cos(2 * M_PI * F_0 * (x * cos(omega) + y * sin(omega)));
   }
 
- public:
   virtual float_type fourier(float_type x, float_type y) const {
     return K / (2 * sqr(a)) *
            (exp(-M_PI / sqr(a) *
@@ -196,11 +199,12 @@ class GaborNoise_anisotropic : public GaborNoise {
                 (sqr(x + F_0 * cos(omega)) + sqr(y + F_0 * sin(omega)))));
   }
 
+ public:
   void set_omega(float_type _omega = M_PI / 4.0) { this->omega = _omega; }
 
   float_type variance() const { return 0; }
 
-  float_type get_gabor(float_type x, float_type y) const {
+  float_type get_kernel(float_type x, float_type y) const {
     return gabor(K, a, F_0, omega, x * kernel_radius, y * kernel_radius);
   }
 };
@@ -279,6 +283,15 @@ class GaborNoise_isotropic_kernel : public GaborNoise {
     return K * exp(A * sqr(r)) * B * J(C * r);
   }
 
+
+  virtual float_type fourier(float_type x, float_type y) const {
+    float_type f_r = sqrt(sqr(x) + sqr(y));
+    float_type A = 2 * M_PI * K * F_0 / sqr(a);
+    float_type B = -M_PI / sqr(a) * (sqr(f_r) + sqr(F_0));
+    float_type C = 2 * M_PI * F_0 / sqr(a) * f_r;
+    return A * exp(B) * I(C);
+  }
+
  public:
   GaborNoise_isotropic_kernel(float_type _K = 1.0, float_type _a = .05,
                               float_type _F_0 = .0625,
@@ -290,12 +303,5 @@ class GaborNoise_isotropic_kernel : public GaborNoise {
     C = 2 * M_PI * F_0;
   }
 
-  virtual float_type fourier(float_type x, float_type y) const {
-    float_type f_r = sqrt(sqr(x) + sqr(y));
-    float_type A = 2 * M_PI * K * F_0 / sqr(a);
-    float_type B = -M_PI / sqr(a) * (sqr(f_r) + sqr(F_0));
-    float_type C = 2 * M_PI * F_0 / sqr(a) * f_r;
-    return A * exp(B) * I(C);
-  }
   float_type variance() const { return 0; }
 };
